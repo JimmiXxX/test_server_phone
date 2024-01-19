@@ -1,0 +1,837 @@
+:root{
+    --red: rgba(238, 37, 35, 1);
+    --H3tag: rgba(31, 31, 31, 1);
+    --H2tag: rgba(0, 0, 0, 1);
+    --H4tag: rgba(0, 0, 0, 0.5);
+    --bg-clr: rgba(248, 248, 248, 1);
+    --blur: rgba(0, 0, 0, 0.12);
+}
+
+*{
+    font-family: Inter, sans-serif;
+}
+
+button{
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1920px){
+
+    body{
+        max-width: 1920px;
+        overflow-x: hidden;
+    }
+
+    .wrapper{
+        margin: 0 auto;
+        max-width: 1410px;
+    }
+
+    .header{
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+    }
+
+    .logo{
+        left: 0;
+        cursor: pointer;
+        background: url("images/logo.png") no-repeat;
+        background-size: contain;
+        height: 43px;
+        width: 199px;
+        padding-right: 90px;
+    }
+
+    nav{
+        display: flex;
+        gap: 36px;
+        margin-right: 76px;
+        font-size: 16px;
+        font-weight: 400;
+        color: var(--H3tag);
+    }
+
+    nav div{
+        cursor: pointer;
+    }
+
+    .phone{
+        color: var(--red);
+        font-weight: 600;
+    }
+
+    .offer{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 65px;
+    }
+
+    h1{
+        color: var(--H2tag);
+        font-weight: 600;
+        font-size: 50px;
+        line-height: 65px;
+    }
+
+    .colorbg{
+        background: var(--bg-clr);
+        z-index: -10;
+        position: absolute;
+        top: 105px;
+        left: 0;
+        width: 100%;
+        height: 413px;
+    }
+
+    .leftOfferMenu{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .offerBtn{
+        margin-top: 40px;
+        padding: 13px 96px;
+        background: var(--red);
+        color: white;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        border: 1px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+    }
+
+    .offerImg{
+        position: absolute;
+        right: -25px;
+        top: 105px;
+        background: url("images/camers.png") no-repeat;
+        background-size: contain;
+        height: 413px;
+        width: 804px;
+    }
+
+    h2{
+        margin-top: 65px;
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 45px;
+        color: var(--H2tag);
+        margin-bottom: 40px;
+    }
+
+    .stickServerPhone{
+        display: none;
+    }
+
+    .blockCards{
+        display: flex;
+        gap: 60px;
+        margin-bottom: 50px;
+
+    }
+    .cards{
+        width: 440px;
+        padding: 40px 30px 0 30px;
+        box-shadow: 0 0 5px var(--blur);
+        position: relative;
+    }
+
+    .cards h3{
+        color: var(--H3tag);
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 36px;
+    }
+
+    .cards h4{
+        color: var(--H4tag);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        height: 30px;
+    }
+
+    .img1{
+        background: url("images/1Cam.png") no-repeat;
+        background-size: contain;
+        height: 250px;
+        width: 380px;
+    }
+    .img2{
+        background: url("images/2Cam.png") no-repeat;
+        background-size: contain;
+        height: 250px;
+        width: 380px;
+    }
+    .img3{
+        background: url("images/3Cam.png") no-repeat;
+        background-size: contain;
+        height: 250px;
+        width: 380px;
+    }
+
+    .price{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 100px;
+    }
+
+    .freePrice{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 48px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        line-height: 24px;
+    }
+
+    .rub\/mon{
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .rub{
+        border-bottom: 1px solid black;
+    }
+
+    .priceBtn{
+        border: 1px;
+        border-radius: 8px;
+        color: white;
+        background: var(--red);
+        padding: 13px 19px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 23px
+    }
+
+    .dropDownFree{
+        display: none;
+        position: absolute;
+        z-index: 1;
+        top: 50px;
+        background: rgba(255, 255, 255, 1);
+        padding: 26px 30px;
+        width: 200px;
+        font-size: 16px;
+        font-weight: 400;
+        float: left;
+    }
+    .dropDownFree div{
+        border-top: 1px solid rgba(231, 231, 231, 1);
+        padding: 15px 20px 5px 20px;
+    }
+
+    .dropDownInfo div{
+        border-top: 1px solid rgba(231, 231, 231, 1);
+        padding: 15px 20px 5px 20px;
+
+    }
+
+    .dropDownInfo{
+        display: none;
+        position: absolute;
+        top: 50px;
+        background: rgba(255, 255, 255, 1);
+        padding: 26px 30px;
+        width: 200px;
+        font-size: 16px;
+        z-index: 1;
+        font-weight: 400;
+        float: left;
+    }
+
+    .dropDownInfo div:hover{
+        cursor: pointer;
+        background: rgb(227, 227, 227);
+    }
+
+    .dropDownFree div:hover{
+        cursor: pointer;
+        background:  rgb(227, 227, 227);
+    }
+
+
+    .infoHover:hover .dropDownInfo
+    {
+        display: block;
+    }
+    .freeHover:hover .dropDownFree
+    {
+        display: block;
+    }
+
+    .stickServer{
+        position: fixed;
+        top: 350px;
+        right: 0;
+        z-index: 1;
+        border-radius: 8px 0 0 8px;
+        color: white;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        background: url("images/wallet-3.png") 200px 30px no-repeat red;
+        height: 86px;
+        width: 200px;
+        background-size: 24px 24px;
+    }
+}
+@media screen and (max-width: 768px){
+
+    body{
+        max-width: 768px;
+        overflow-x: hidden;
+    }
+
+    .wrapper{
+        margin: 0 auto;
+        max-width: 688px;
+    }
+
+    .header{
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+    }
+
+    .logo{
+        left: 0;
+        cursor: pointer;
+        background: url("images/logo.png") no-repeat;
+        background-size: contain;
+        height: 43px;
+        width: 199px;
+    }
+
+    nav{
+        display: none;
+    }
+
+    .phoneNav{
+        margin-left: 200px;
+        display: flex;
+        gap: 170px;
+    }
+
+    .people{
+        background: url("images/user.png") no-repeat;
+        background-size: contain;
+        height: 22px;
+        width: 23px;
+    }
+
+    .navMenu{
+        background: url("images/lineMenu.png") no-repeat;
+        background-size: contain;
+        width: 24px;
+        height: 19px;
+    }
+
+    .offer{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    h1{
+        color: var(--H2tag);
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 65px;
+        margin-top: 80px;
+        margin-bottom: 0;
+    }
+    .colorbg{
+        background: var(--bg-clr);
+        z-index: -10;
+        position: absolute;
+        top: 85px;
+        left: 0;
+        width: 100%;
+        height: 395px;
+    }
+
+    .leftOfferMenu{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .offerBtn{
+        margin-top: 40px;
+        padding: 13px 72px;
+        background: var(--red);
+        color: white;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        border: 1px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+    }
+
+    .offerImg{
+        position: absolute;
+        left: 280px;
+        top: 85px;
+        z-index: -1;
+        background: url("images/camers.png") no-repeat;
+        background-size: contain;
+        height: 100%;
+        width: 100%;
+    }
+
+    h2{
+        margin-top: 65px;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 45px;
+        color: var(--H2tag);
+        margin-bottom: 40px;
+    }
+
+
+    .blockCards{
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+
+    }
+    .cards{
+        width: 270px;
+        padding: 40px 30px;
+        box-shadow: 0 0 5px var(--blur);
+
+    }
+
+    .cards h3{
+        color: var(--H3tag);
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .cards h4{
+        color: var(--H4tag);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .img1{
+        background: url("images/1Cam.png") no-repeat;
+        background-size: contain;
+        height: 180px;
+        width: 274px;
+    }
+    .img2{
+        background: url("images/2Cam.png") no-repeat;
+        background-size: contain;
+        height: 180px;
+        width: 274px;
+    }
+    .img3{
+        background: url("images/3Cam.png") no-repeat;
+        background-size: contain;
+        height: 180px;
+        width: 274px;
+    }
+
+    .price{
+        margin-bottom: 10px;
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .freePrice{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 48px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        line-height: 24px;
+    }
+
+    .rub\/mon{
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .rub{
+        border-bottom: 1px solid black;
+    }
+
+    .priceBtn{
+        border: 1px;
+        border-radius: 8px;
+        color: white;
+        background: var(--red);
+        padding: 13px 19px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 23px;
+    }
+
+    .dropDownFree{
+        display: none;
+        position: absolute;
+        z-index: 1;
+        top: 50px;
+        background: rgba(255, 255, 255, 1);
+        padding: 26px 30px;
+        width: 200px;
+        font-size: 16px;
+        font-weight: 400;
+        float: left;
+    }
+
+    .stickServerPhone{
+        display: none;
+    }
+
+    .dropDownFree div{
+        border-top: 1px solid rgba(231, 231, 231, 1);
+        padding: 15px 20px 5px 20px;
+    }
+
+    .dropDownInfo div{
+        border-top: 1px solid rgba(231, 231, 231, 1);
+        padding: 15px 20px 5px 20px;
+
+    }
+
+    .dropDownInfo{
+        display: none;
+        position: absolute;
+        top: 50px;
+        background: rgba(255, 255, 255, 1);
+        padding: 26px 30px;
+        width: 200px;
+        font-size: 16px;
+        z-index: 1;
+        font-weight: 400;
+        float: left;
+    }
+
+    .dropDownInfo div:hover{
+        cursor: pointer;
+        background: rgb(227, 227, 227);
+    }
+
+    .dropDownFree div:hover{
+        cursor: pointer;
+        background:  rgb(227, 227, 227);
+    }
+
+
+    .infoHover:hover .dropDownInfo
+    {
+        display: block;
+    }
+    .freeHover:hover .dropDownFree
+    {
+        display: block;
+    }
+
+    .stickServer{
+        position: fixed;
+        top: 350px;
+        right: 0;
+        z-index: 1;
+        border-radius: 8px 0 0 8px;
+        color: white;
+        display: flex;
+        align-items: center;
+        padding: 0 20px;
+        background: url("images/wallet-3.png") 200px 30px no-repeat red;
+        height: 86px;
+        width: 200px;
+        background-size: 24px 24px;
+    }
+}
+@media screen and (max-width: 480px){
+
+    body{
+        max-width: 480px;
+        overflow-x: hidden;
+    }
+
+    .wrapper{
+        margin: 0 auto;
+        max-width: 390px;
+    }
+
+    .header{
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+    }
+
+    .logo{
+        left: 0;
+        cursor: pointer;
+        background: url("images/logo.png")no-repeat;
+        width: 199px;
+        height: 43px;
+        background-size: contain;
+    }
+
+    nav{
+        display: none;
+    }
+
+    .phoneNav{
+        display: flex;
+        align-items: center;
+        margin-left: 0;
+        gap: 70px;
+    }
+
+    .people{
+        background: url("images/user.png") no-repeat;
+        background-size: contain;
+        height: 22px;
+        width: 23px;
+    }
+
+    .navMenu{
+        background: url("images/lineMenu.png") no-repeat;
+        background-size: contain;
+        width: 24px;
+        height: 19px;
+    }
+
+    .offer{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0;
+    }
+
+    h1{
+        color: var(--H2tag);
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .leftOfferMenu{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .offerBtn{
+        margin-top: 40px;
+        padding: 13px 96px;
+        background: var(--red);
+        color: white;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        border: 1px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+    }
+
+    .offerImg{
+        position: absolute;
+        left: 65px;
+        top: 70px;
+        background: url("images/camers.png") no-repeat;
+        background-size: contain;
+        height: 413px;
+        width: 804px;
+
+    }
+
+    h2{
+        margin-top: 65px;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 45px;
+        color: var(--H2tag);
+        margin-bottom: 40px;
+    }
+
+
+    .blockCards{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+
+    }
+    .cards{
+        width: 340px;
+        padding: 40px 30px 0 30px;
+        box-shadow: 0 0 5px var(--blur);
+
+    }
+
+    .cards h3{
+        color: var(--H3tag);
+        font-weight: 600;
+        font-size: 25px;
+        line-height: 36px;
+    }
+
+    .cards h4{
+        color: var(--H4tag);
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .img1{
+        background: url("images/1Cam.png") no-repeat;
+        background-size: contain;
+        height: 180px;
+        width: 315px;
+    }
+    .img2{
+        background: url("images/2cam.png") no-repeat;
+        background-size: contain;
+        height: 180px;
+        width: 315px;
+    }
+    .img3{
+        background: url("images/3Cam.png") no-repeat;
+        background-size: contain;
+        height: 180px;
+        width: 315px;
+    }
+
+    .price{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .freePrice{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 48px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        line-height: 24px;
+    }
+
+    .rub\/mon{
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .rub{
+        border-bottom: 1px solid black;
+    }
+
+    .priceBtn{
+        border: 1px;
+        border-radius: 8px;
+        color: white;
+        background: var(--red);
+        padding: 12px 46px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 23px
+    }
+
+    .dropDownFree{
+        display: none;
+        position: absolute;
+        z-index: 1;
+        top: 50px;
+        background: rgba(255, 255, 255, 1);
+        padding: 26px 30px;
+        width: 200px;
+        font-size: 16px;
+        font-weight: 400;
+        float: left;
+    }
+    .dropDownFree div{
+        border-top: 1px solid rgba(231, 231, 231, 1);
+        padding: 15px 20px 5px 20px;
+    }
+
+    .dropDownInfo div{
+        border-top: 1px solid rgba(231, 231, 231, 1);
+        padding: 15px 20px 5px 20px;
+
+    }
+
+    .dropDownInfo{
+        display: none;
+        position: absolute;
+        top: 50px;
+        background: rgba(255, 255, 255, 1);
+        padding: 26px 30px;
+        width: 200px;
+        font-size: 16px;
+        z-index: 1;
+        font-weight: 400;
+        float: left;
+    }
+
+    .dropDownInfo div:hover{
+        cursor: pointer;
+        background: rgb(227, 227, 227);
+    }
+
+    .dropDownFree div:hover{
+        cursor: pointer;
+        background:  rgb(227, 227, 227);
+    }
+
+
+    .infoHover:hover .dropDownInfo
+    {
+        display: block;
+    }
+    .freeHover:hover .dropDownFree
+    {
+        display: block;
+    }
+
+    .stickServer{
+        display: none;
+        position: fixed;
+        top: 350px;
+        right: 0;
+        z-index: 1;
+        border-radius: 8px 0 0 8px;
+        color: white;
+        align-items: center;
+        padding: 0 20px;
+        background: url("images/wallet-3.png") 200px 30px no-repeat red;
+        height: 86px;
+        width: 200px;
+        background-size: 24px 24px;
+    }
+
+
+    .stickServerPhone{
+        position: fixed;
+        top: 500px;
+        right: 0;
+        z-index: 1;
+        border-radius: 8px 0 0 8px;
+        display: flex;
+        color: white;
+        align-items: center;
+        padding: 0 20px;
+        background: url("images/wallet-3.png") 140px 15px no-repeat var(--red);
+        height: 54px;
+        width: 145px;
+        background-size: 24px 24px;
+    }
+}
+
+
