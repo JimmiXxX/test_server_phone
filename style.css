@@ -134,7 +134,7 @@ button{
     }
     .cards{
         width: 440px;
-        padding: 40px 30px 0 30px;
+        padding: 40px 30px 20px 30px;
         box-shadow: 0 0 5px var(--blur);
         position: relative;
     }
